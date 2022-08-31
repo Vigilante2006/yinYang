@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #000;
+}
+/* container */
+#main {
+  /* border: 5px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+/* mainCircle */
+.circle {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 27vh;
+  width: 27vh;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255) 50%,
+    rgb(255, 255, 255) 50%,
+    rgb(0, 0, 0) 50%,
+    rgb(0, 0, 0) 50%
+  );
+
+  box-shadow: 0px 0px 40px rgb(255 255 255 / 50%);
+  animation: run 5s infinite linear;
+}
+
+@keyframes run {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+/* Mini Circles circle */
+.circle .mincr {
+  /* border: 1px solid red; */
+  height: 15vh;
+  width: 15vh;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle span {
+  height: 4vh;
+  width: 4vh;
+  border-radius: 50%;
+}
+/* Bad Part */
+.circle .goodinbad {
+  background: black;
+}
+.circle .goodinbad span {
+  background: white;
+}
+/* Good Part */
+.circle .badingood {
+  background: white;
+}
+.circle .badingood span {
+  background: black;
+}
